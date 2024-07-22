@@ -1,32 +1,32 @@
 # Gilded Rose Inventory System
 
-Bienvenido al sistema de inventario de Gilded Rose. Este sistema actualiza la calidad y el `sellIn` (días para vender) 
-de los artículos diariamente según reglas específicas.
+Welcome to the Gilded Rose Inventory System. This system updates the quality and the `sellIn` (days to sell)
+of items on a daily basis according to specific rules.
 
-## Descripción del Proyecto
+## Project Description
 
-Este proyecto simula el sistema de inventario de la posada Gilded Rose. Los artículos en el inventario tienen 
-propiedades `sellIn` y `quality` que se actualizan cada día según reglas específicas.
+This project simulates the inventory system of the Gilded Rose Inn. Items in the inventory have
+properties `sellIn` and `quality` which are updated daily according to specific rules.
 
-### Reglas de Actualización
+### Updating Rules
 
-- Todos los artículos tienen una propiedad `sellIn` que denota el número de días que tenemos para venderlo.
-- Todos los artículos tienen una propiedad `quality` que denota cuán valioso es el artículo.
-- Al final de cada día, el sistema decrementa ambos valores para cada artículo mediante el método `updateQuality()`.
-- Una vez que ha pasado la fecha recomendada de venta (`sellIn` < 0), la `quality` se degrada al doble de velocidad.
-- La `quality` de un artículo nunca es negativa.
-- El "Queso Brie envejecido" (`Aged Brie`) incrementa su `quality` a medida que se pone viejo.
-- La `quality` de un artículo nunca es mayor a 50, excepto para "Sulfuras" (`Sulfuras, Hand of Ragnaros`), que tiene 
-una `quality` fija de 80 y no cambia.
-- Una "Entrada al Backstage" (`Backstage passes`) incrementa su `quality` a medida que se acerca la fecha del concierto:
-    - Si faltan 10 días o menos para el concierto, la `quality` se incrementa en 2 unidades.
-    - Si faltan 5 días o menos, la `quality` se incrementa en 3 unidades.
-    - Después del concierto, la `quality` cae a 0.
-- Los objetos "conjurados" (`Conjured`) se degradan en calidad dos veces más rápido que los objetos normales.
+- All items have a `sellIn` property which denotes the number of days we have to sell it.
+- All items have a `quality` property which denotes how valuable the item is.
+- At the end of each day, the system decrements both values for each item using the `updateQuality()` method.
+- Once the recommended sale date has passed (`sellIn` < 0), the `quality` degrades at twice the rate.
+- The `quality` of an item is never negative.
+- Aged Brie cheese' (`Aged Brie`) increases in quality as it gets older.
+- The `quality` of an item is never greater than 50, except for `Sulfuras` (`Sulfuras, Hand of Ragnaros`), which has a 
+fixed `quality` of 80 and a fixed `quality` of 50.
+  a fixed `quality` of 80 and does not change.
+- A ‘Backstage passes’ increases in quality as the concert date approaches:
+  - If the concert is 10 days or less away, the quality increases by 2 units.
+  - If it is 5 days or less, the `quality` increases by 3 units.
+  - After the concert, the `quality` drops to 0.
+- Conjured’ objects degrade in quality twice as fast as normal objects.
 
-## Estructura del Proyecto
+## Project Structure
 
-- **Item.java**: Clase que representa un artículo en el inventario.
-- **GildedRose.java**: Clase que contiene la lógica para actualizar los artículos del inventario.
-- **GildedRoseTest.java**: Pruebas unitarias para verificar la correcta funcionalidad del sistema.
-
+- **Item.java**: Class representing an item in the inventory.
+- **GildedRose.java**: Class containing the logic for updating inventory items.
+- **GildedRoseTest.java**: Unit tests to verify the correct functionality of the system.
