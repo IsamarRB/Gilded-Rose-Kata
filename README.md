@@ -21,9 +21,6 @@ fixed `quality` of 80 and a fixed `quality` of 50.
   a fixed `quality` of 80 and does not change.
 - A ‘Backstage passes’ increases in quality as the concert date approaches:
   - If the concert is 10 days or less away, the quality increases by 2 units.
-
-![GildedRose](https://github.com/user-attachments/assets/aa070c7a-336e-46c7-b01a-b55b7788f9a6)
-
   - If it is 5 days or less, the `quality` increases by 3 units.
   - After the concert, the `quality` drops to 0.
 - Conjured’ objects degrade in quality twice as fast as normal objects.
@@ -33,3 +30,6 @@ fixed `quality` of 80 and a fixed `quality` of 50.
 - **Item.java**: Class representing an item in the inventory.
 - **GildedRose.java**: Class containing the logic for updating inventory items.
 - **GildedRoseTest.java**: Unit tests to verify the correct functionality of the system.
+
+
+![GildedRose](https://github.com/user-attachments/assets/aa070c7a-336e-46c7-b01a-b55b7788f9a6)
